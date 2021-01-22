@@ -24,10 +24,10 @@ public class User {
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "first_name",nullable = false)
+    @Column(name = "firstName",nullable = false)
     private String firstName;
 
-    @Column(name = "last_name",nullable = false)
+    @Column(name = "lastName",nullable = false)
     private String lastName;
 
     @Column(name = "email")
@@ -56,14 +56,33 @@ public class User {
 
     }
 
-    public User(String firstName, String lastName, String email, String password, Collection<Role> roles) {
+    public User(String firstName, String lastName, String email, String phone, String company, String password, Collection<Role> roles) {
         super();
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.phone=phone;
+        this.company=company;
         this.password = password;
         this.roles = roles;
     }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getCompany() {
+        return company;
+    }
+
+    public void setCompany(String company) {
+        this.company = company;
+    }
+
     public Long getId() {
         return id;
     }

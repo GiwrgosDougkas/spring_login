@@ -4,18 +4,38 @@ public class UserRegistrationDto {
     private String firstName;
     private String lastName;
     private String email;
+    private String phone;
+    private String company;
     private String password;
 
     public UserRegistrationDto(){
 
     }
 
-    public UserRegistrationDto(String firstName, String lastName, String email, String password) {
+    public UserRegistrationDto(String firstName, String lastName, String email,String phone, String company, String password) {
         super();
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.phone=phone;
+        this.company=company;
         this.password = password;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getCompany() {
+        return company;
+    }
+
+    public void setCompany(String company) {
+        this.company = company;
     }
 
     public String getFirstName() {
